@@ -1,0 +1,30 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  align-items: center;
+   
+}
+.info {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 12px;
+    color: black;
+}
+.button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: all 200ms ease-in-out;
+  height: 30px;
+  
+}
+.button:hover {
+  scale: 1.05;
+  background-color: #ffffff;
+}
