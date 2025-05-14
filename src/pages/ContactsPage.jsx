@@ -1,16 +1,24 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { fetchContacts } from '../redux/contacts/operations';
 
-const ContactsPage = () => {
-    const dispatch = useDispatch();
+import ContactForm from '../components/ContactForm/ContactForm';
+import ContactList from '../components/ContactList/ContactList';
+import SearchBox from '../components/SearchBox/SearchBox';
 
-    useEffect(() => {
-        dispatch(fetchContacts());
-      }, [dispatch]);
-      
-    return <div>
-        <h2>Contacts Page</h2>
-            </div>
-}
+export const ContactsPage = () => {
+  const dispatch = useDispatch();
 
-export default ContactsPage;
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
+  return (
+    <div>
+      <h2>Contacts</h2>
+      <ContactForm />
+      <SearchBox />
+      <ContactList />
+    </div>
+  );
+};

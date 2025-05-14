@@ -9,7 +9,7 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import RegistrationPage from "./pages/RegistrationPage";
 import LoginPage from "./pages/LoginPage";
-import ContactsPage from "./pages/ContactsPage";
+import { ContactsPage } from "./pages/ContactsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Layout from "./components/Layout/Layout";
 import { refreshThunk } from "./redux/auth/operations";

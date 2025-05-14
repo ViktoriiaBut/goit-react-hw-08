@@ -14,6 +14,7 @@ const RegisterForm = () => {
 
     const handleSubmit = (values, options) => {
        dispatch(registerThunk(values));
+       options.resetForm();
     }
 
     return (
