@@ -4,6 +4,13 @@ import s from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
 import { addDataContacts } from '../../redux/contactsOps';
 
+// import { useDispatch, useSelector } from 'react-redux';
+// import { addContact } from '../../redux/contacts/operations';
+// import { selectContacts } from '../../redux/contacts/selectors';
+// import css from './ContactForm.module.css';
+
+
+
 const ContactForm = () => {
   const dispatch = useDispatch();
 
@@ -16,13 +23,11 @@ const ContactForm = () => {
    dispatch(addDataContacts(contactData));
    actions.resetForm();
   };
-
-
+   
   const feedbackSchema = Yup.object().shape({
     name: Yup.string().min(3).max(20).required("Required"), 
     number: Yup.string().min(7).max(20).required("Required"), 
         });
-
 
         
   return (
@@ -56,3 +61,4 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+

@@ -40,3 +40,4 @@ const Contact = ({ data }) => {
   
   export default Contact;
 
+ 
