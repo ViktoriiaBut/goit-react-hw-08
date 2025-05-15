@@ -8,3 +8,4 @@ const RestrictedRoute = ({ children, redirectTo = "/" }) => {
 };
 
 export default RestrictedRoute;
+

@@ -8,6 +8,7 @@ const RegisterForm = () => {
     const dispatch = useDispatch ();
 
     const initialValues = {
+        name: "",
         email: "",
         password: "",
     };
@@ -26,8 +27,12 @@ const RegisterForm = () => {
 
             <Form className={s.form}>
           <fieldset className="fieldset">
+          <label className={s.label}>Name</label>
+          <Field name="name" type="text" className={s.input} placeholder="Your name" />
+
           <label className={s.label}>Email</label>
           <Field name="email" type="email" className={s.input} placeholder="Email" />
+          
           <label className={s.label}>Password</label>          
           <Field name="password" type="password" className={s.input} placeholder="Password" />
 
